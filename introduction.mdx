@@ -1,0 +1,137 @@
+---
+title: Introduction to Lawnstarter
+description: Get an overview of Lawnstarter, a SaaS platform for organizing and managing project documentation, including key features and how it helps teams collaborate.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Lawnstarter provides a comprehensive SaaS platform designed to streamline how you organize and manage project documentation. You can create structured knowledge bases, collaborate in real-time with your team, and ensure all important information stays accessible and up-to-date. With intuitive tools for versioning, search, and integrations, Lawnstarter eliminates the chaos of scattered docs and scattered files.
+
+The platform supports teams of all sizes, from startups to enterprises, by offering customizable workspaces tailored to your workflows. Focus on your projects while Lawnstarter handles the documentation heavy lifting.
+
+## Key Features
+
+Discover the core capabilities that make Lawnstarter your go-to solution for documentation management.
+
+<Columns cols={3}>
+
+<Card title="Document Organization" icon="folder" href="#organization">
+
+  Create hierarchical structures with pages, subpages, and databases. Use tags and search to find content instantly.
+
+</Card>
+
+<Card title="Real-time Collaboration" icon="users" href="#collaboration">
+
+  Edit documents simultaneously with teammates. Track changes, add comments, and resolve feedback efficiently.
+
+</Card>
+
+<Card title="Version History & Search" icon="history" href="#search">
+
+  Maintain full revision history and rollback as needed. Powerful full-text search uncovers information quickly.
+
+</Card>
+
+</Columns>
+
+## Brand Guidelines
+
+Incorporate Lawnstarter's primary brand color `{#1F883D}` (a vibrant green) into your custom themes and UI elements. This color represents growth and reliability, aligning with the platform's focus on nurturing project knowledge.
+
+<Callout kind="tip">
+  Update your workspace theme via <strong>Settings {`>`} Appearance</strong> to apply `{#1F883D}` as the accent color.
+</Callout>
+
+## Quick Start
+
+Get up and running with Lawnstarter in minutes using these steps.
+
+<Steps>
+
+<Step title="Create Account" icon="user-plus">
+
+  Visit [https://app.lawnstarter.com](https://app.lawnstarter.com) and sign up with your email.
+
+  ```bash
+  # No code needed - just click "Sign Up"
+  ```
+
+</Step>
+
+<Step title="Set Up Workspace" icon="settings">
+
+  After login, create a new workspace for your project.
+
+  <CodeGroup tabs="JavaScript,Python">
+
+  ```javascript
+  // Example: Fetch workspace creation via API
+  const response = await fetch('https://api.example.com/workspaces', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+    body: JSON.stringify({ name: 'My Project Docs' })
+  });
+  ```
+
+  ```python
+  # Example: Create workspace with requests
+  import requests
+  response = requests.post('https://api.example.com/workspaces',
+                          headers={'Authorization': 'Bearer YOUR_API_KEY'},
+                          json={'name': 'My Project Docs'})
+  ```
+
+  </CodeGroup>
+
+</Step>
+
+<Step title="Add Your First Document" icon="file-plus">
+
+  Navigate to your workspace dashboard and click "New Page". Start editing with rich text, embeds, or code blocks.
+
+</Step>
+
+</Steps>
+
+## Next Steps
+
+Ready to dive deeper? Explore these resources to unlock Lawnstarter's full potential.
+
+<Columns cols={2}>
+
+<Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+
+  Build your first documentation site step-by-step.
+
+</Card>
+
+<Card title="Authentication" icon="lock" href="/authentication">
+
+  Secure your API access and manage tokens.
+
+</Card>
+
+<Card title="Advanced Features" icon="sparkles" href="/configuration">
+
+  Customize settings and integrations.
+
+</Card>
+
+<Card title="Changelog" icon="git-branch" href="/changelog">
+
+  Stay updated with the latest releases.
+
+</Card>
+
+</Columns>
+
+<Callout kind="tip">
+
+  Begin with the [Quickstart Guide](#) to create your first workspace. You'll be collaborating on docs in under 5 minutes!
+
+</Callout>

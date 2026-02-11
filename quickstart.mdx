@@ -1,0 +1,152 @@
+---
+title: Quickstart Guide
+description: Set up your Lawnstarter account and create your first documentation space in just a few minutes.
+---
+
+<Callout kind="info" title="Prerequisites">
+Before starting, ensure you have:
+- A valid email address for account verification
+- A modern web browser like Chrome, Firefox, or Safari
+- `<5` minutes of time
+</Callout>
+
+## Create Your Lawnstarter Account
+
+Follow these steps to sign up, log in, and set up your first documentation project.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Navigate to the [Lawnstarter signup page](https://app.lawnstarter.com/signup).
+
+    Fill out the registration form with your email, name, and password. Lawnstarter sends a verification email immediately.
+
+    ```
+    Example fields:
+    - Email: your.email@example.com
+    - Name: Your Full Name
+    - Password: (strong password recommended)
+    ```
+  </Step>
+
+  <Step title="Verify Email and Log In" icon="mail">
+    Check your inbox (and spam folder) for the verification email from Lawnstarter.
+
+    Click the verification link, then log in at [https://app.lawnstarter.com/login](https://app.lawnstarter.com/login).
+
+    <Callout kind="tip">
+      Enable two-factor authentication during first login for added security.
+    </Callout>
+  </Step>
+
+  <Step title="Create a New Documentation Project" icon="plus">
+    Once logged in, click **New Space** in the top-right dashboard.
+
+    Enter a project name like `My First Docs` and select a blank template.
+
+    Click **Create** to generate your empty documentation workspace.
+  </Step>
+</Steps>
+
+## Explore Basic Workspace Navigation
+
+Your new documentation space includes these key areas:
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor-section">
+    Write and preview MDX content in real-time.
+  </Card>
+  <Card title="File Tree" icon="layout" href="#files-section">
+    Organize pages with drag-and-drop folders.
+  </Card>
+  <Card title="Publish" icon="globe" href="#publish-section">
+    Deploy your docs to a custom domain.
+  </Card>
+</Columns>
+
+## Import Initial Content
+
+Populate your space quickly using these methods.
+
+<Tabs>
+  <Tab title="Manual Paste" icon="clipboard">
+    Open a new page and paste markdown content.
+
+````markdown
+# Welcome to My Docs
+
+This is your first page.
+
+## Quick Features
+
+- Real-time editing
+- Custom themes
+- API integrations
+````
+  </Tab>
+
+  <Tab title="GitHub Import" icon="github">
+    In the workspace settings, connect your GitHub repo.
+
+    Select the branch and import path. Lawnstarter syncs changes automatically.
+  </Tab>
+
+  <Tab title="API Import" icon="code">
+    Use the Lawnstarter API to bulk import.
+
+<CodeGroup tabs="JavaScript,cURL">
+```javascript
+const response = await fetch('https://api.lawnstarter.com/v1/spaces/{SPACE_ID}/pages', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    path: 'introduction.mdx',
+    content: '# Imported Page\nYour content here.'
+  })
+});
+```
+```bash
+curl -X POST https://api.lawnstarter.com/v1/spaces/{SPACE_ID}/pages \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "path": "introduction.mdx",
+    "content": "# Imported Page\nYour content here."
+  }'
+```
+</CodeGroup>
+  </Tab>
+</Tabs>
+
+<ParamField path="SPACE_ID" param-type="string" required="true">
+  Your documentation space identifier from the dashboard URL.
+</ParamField>
+
+<ParamField header="Authorization" param-type="string" required="true">
+  Bearer token obtained from account settings.
+</ParamField>
+
+## Next Steps
+
+Congratulations! You've set up Lawnstarter and imported content.
+
+<Columns cols={2}>
+  <Card title="Full Introduction" icon="book-open" href="/introduction">
+    Dive deeper into Lawnstarter features and customization.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Manage API keys and secure your spaces.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Import fails?** Check API key permissions and `SPACE_ID`.
+  - **Navigation lost?** Use the search bar in the file tree.
+  - **Need help?** Visit the [support dashboard](https://dashboard.lawnstarter.com/support).
+</Expandable>
+
+<Callout kind="success">
+  Your documentation space is ready. Start editing and publishing!
+</Callout>

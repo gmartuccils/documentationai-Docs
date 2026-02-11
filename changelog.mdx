@@ -1,0 +1,140 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Lawnstarter with release notes.
+---
+
+## Stay Up to Date
+
+Monitor this changelog for the latest releases, new features, bug fixes, and improvements to Lawnstarter's API and documentation tools. New versions deploy automatically, and you receive notifications via your configured channels.
+
+<Callout kind="info">
+Subscribe to updates by starring the [GitHub repository](https://github.com/lawnstarter/brain) or joining the newsletter at `https://lawnstarter.com/updates`.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time lawn care scheduling API endpoint at `https://api.example.com/v1/schedules`
+- Introduced webhook support for job status updates to `https://your-webhook-url.com/webhook`
+- New dashboard analytics for pros at `https://dashboard.example.com/analytics`
+
+## Improvements
+
+- Enhanced search filters for service providers
+- Optimized API response times by `>30%`
+
+## Bug Fixes
+
+- Fixed authentication token refresh issues
+- Resolved duplicate booking errors
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Service provider onboarding flow with document upload
+- Mobile-responsive booking interface
+
+## Bug Fixes
+
+- Corrected pricing calculation discrepancies
+- Fixed email notification delivery failures
+
+## Improvements
+
+- Updated UI components for better accessibility
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core booking and scheduling API
+- User authentication with API keys
+- Basic provider dashboard
+
+## Breaking Changes
+
+- Migrated to new endpoint structure: `/v1/` prefix required
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade your Lawnstarter integration to the latest version.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+Review your current integration against the [migration guide](#).
+
+  </Step>
+  <Step title="Update SDK" icon="download">
+  
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install lawnstarter-sdk@latest
+````
+````bash
+yarn add lawnstarter-sdk@latest
+````
+</CodeGroup>
+
+  </Step>
+  <Step title="Update Configuration" icon="settings">
+
+Replace old endpoints:
+
+````javascript
+// Old
+const baseURL = 'https://api.example.com';
+
+// New
+const baseURL = 'https://api.example.com/v1';
+````
+
+  </Step>
+  <Step title="Test Integration" icon="play">
+
+Run your test suite and verify bookings at `https://dashboard.example.com`.
+
+  </Step>
+</Steps>
+
+## Upcoming Changes
+
+<Expandable title="Preview: v1.3.0 Features" default-open="false">
+
+- AI-powered service recommendations
+- Expanded payment integrations
+- Multi-location support for providers
+
+<Callout kind="tip">
+Provide feedback on these features via GitHub issues.
+</Callout>
+
+</Expandable>
+
+## Quick Links
+
+<Columns cols={3}>
+  <Card title="API Reference" icon="code" href="/authentication">
+    Full endpoint documentation.
+  </Card>
+  <Card title="Migration Guide" icon="arrow-right" href="/quickstart">
+    Upgrade from previous versions.
+  </Card>
+  <Card title="Status Page" icon="activity" href="https://status.example.com">
+    Live system status.
+  </Card>
+</Columns>
+
+<Callout kind="tip" title="Get Help">
+Join the community forum or contact support for upgrade assistance.
+</Callout>
